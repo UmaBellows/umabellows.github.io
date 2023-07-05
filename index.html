@@ -42,6 +42,27 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Bootstrap Touch Carousel CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/css/bootstrap-touch-carousel.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap Touch Carousel JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/js/bootstrap-touch-carousel.min.js"></script>
+ 
+<!-- Bootstrap Touch Swipe JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+
+    
 </head>
 <style>
   .btn-call {
@@ -122,32 +143,33 @@
     }
   }
 
-  
-@media (max-width: 767px) {
 
-  .logo-slider-container {
-    display: flex;
-    animation: logo-slider-animation 20s linear infinite; 
-    animation-delay: -5s;
-    /* white-space: nowrap; */
+  @media (max-width: 767px) {
 
-  } 
+    .logo-slider-container {
+      display: flex;
+      animation: logo-slider-animation 20s linear infinite;
+      animation-delay: -5s;
+      /* white-space: nowrap; */
 
-  .logo-slider-item img {
-    max-height: 50px;
-    transition: transform 0.4s ease;
-  }
-  @keyframes logo-slider-animation {
-    0% {
-      transform: translateX(0%);
     }
 
-    100% {
-      /* transform: translateX(-100%); */
-      transform: translateX(calc(-100% - 60px * 9));
+    .logo-slider-item img {
+      max-height: 65px;
+      transition: transform 0.4s ease;
+    }
+
+    @keyframes logo-slider-animation {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        /* transform: translateX(-100%); */
+        transform: translateX(calc(-100% - 120px * 9));
+      }
     }
   }
-}
 
 
   /* END Logo Slider */
@@ -156,11 +178,74 @@
     margin-top: 0rem !important
   }
 
-  h1,
-  h2,
-  h3 {
-    margin-top: 60px;
+  /* Custom CSS for responsive headings */
+  h1 {
+    font-size: 2rem;
+    /* Adjust the font size as needed */
+    margin-top: 5%;
   }
+
+  h2 {
+    font-size: 1.75rem;
+    /* Adjust the font size as needed */
+    margin-top: 5%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    /* Adjust the font size as needed */
+    margin-top: 5%;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    /* Adjust the font size as needed */
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    /* Adjust the font size as needed */
+  }
+
+  h6 {
+    font-size: 1rem;
+    /* Adjust the font size as needed */
+  }
+
+  /* Responsive classes for mobile and desktop */
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 1.5rem;
+      /* Adjust the font size as needed */
+     }
+
+    h2 {
+      font-size: 1.25rem;
+      /* Adjust the font size as needed */
+     }
+
+    h3 {
+      font-size: 1.1rem;
+      /* Adjust the font size as needed */
+     }
+
+    h4 {
+      font-size: 1rem;
+      /* Adjust the font size as needed */
+    }
+
+    h5 {
+      font-size: 1.3rem;
+      /* Adjust the font size as needed */
+    }
+
+    h6 {
+      font-size: 0.8rem;
+      /* Adjust the font size as needed */
+    }
+  }
+
+
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -231,7 +316,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <br /><br />
           <h3 data-aos="fade-up">
 
@@ -345,51 +430,6 @@
         </div>
       </div>
     </div>
-
-
-    <script>
-      // Adjust carousel width on window resize
-      // $(window).on('resize', function () {
-      //   $('.logo-slider-container').css('width', $('.logo-slider').outerWidth());
-      // }).trigger('resize');
-
-      // $(document).ready(function () {
-      //   // Adjust slide duration (25s) as desired
-      //   var slideDuration = 25000;
-      //   $('.logo-slider-container').css({
-      //     'width': $('.logo-slider').outerWidth(),
-      //     'animation-duration': slideDuration + 'ms'
-      //   });
-
-      //   setInterval(function () {
-      //     $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
-      //   }, slideDuration);
-      // });
-
-//       $(document).ready(function() {
-//   // Adjust slide duration (25s) as desired
-//   var slideDuration = 25000;
-//   $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
-// });
-
-// $(document).ready(function() {
-//   var slideDuration = 1000;
-//   var sliderWidth = $('.logo-slider').outerWidth();
-
-//   // Adjust slide duration (25s) as desired
-//   $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
-//   $('.logo-slider-container').css('width', sliderWidth + 'px');
-
-//   // Adjust carousel width on window resize
-//   $(window).on('resize', function() {
-//     sliderWidth = $('.logo-slider').outerWidth();
-//     $('.logo-slider-container').css('width', sliderWidth + 'px');
-//   });
-// });
-
-
-    </script>
-
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">

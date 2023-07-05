@@ -354,7 +354,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   margin-top: 70px;
 }
 
@@ -459,7 +459,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
@@ -503,77 +503,9 @@ section {
  /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
+ 
 /* LOGOs */
-.clients {
-  overflow: hidden;
-  padding: 60px 0;
-  white-space: nowrap;
-  position: relative;
-}
 
-.clients::before,
-.clients::after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  z-index: 2;
-}
-
-.clients::before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  content: "Our Clients";
-  font-size: 26px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.clients::after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-/*  Logo Slide */
-.clients .logo-slide {
-  display: inline-block;
-  animation: 25s slide infinite linear;
-}
-
-/* Logo Slide Image */
-.clients img {
-  width: auto;
-  height: 70px;
-  margin: 0 50px;
-  /* filter: grayscale(100); */
-  transition: all 0.3s ease-in-out;
-}
-.clients img:hover {
-  filter: none;
-  transform: scale(1.3);
-}
-
-@media (max-width: 768px) {
-  .clients img {
-    width: 40%;
-  }
-}
-
-@media (max-width: 575px) {
-  .clients img {
-    width: 30%;
-  }
-}
 
 /*--------------------------------------------------------------
 # About Us
@@ -1577,100 +1509,85 @@ section {
   }
 } */
 
-
-.footer-clean {
-  padding:50px 0;
-  background-color:#fff;
-  color:#4b4c4d;
-}
-.footer-clean .row {
-  text-align: center;
+.footer {
+  background-color: #f8f9fa;
+  color: #333333;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
-.footer-clean h3 {
-  margin-top:0;
-  margin-bottom:12px;
-  font-weight:bold;
-  font-size:16px;
+.footer a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.footer-clean ul {
-  padding:0;
-  list-style:none;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:0;
+.footer a:hover {
+  color: #007bff;
 }
 
-.footer-clean ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-   
+.footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.footer-clean ul a:hover {
-  opacity:1;
-  text-decoration: underline;
-  font-weight: bold;
+.footer ul {
+  list-style: none;
+  padding: 0;
 }
- 
- .footer-clean  .Footer-logo{
-  width:60%;
-  margin-top: 10px;
- }
-@media (max-width:767px) {
-  .footer-clean .item {
-    text-align:center;
-    padding-bottom:20px;
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li i {
+  margin-right: 8px;
+}
+
+.footer hr {
+  border-top-color: #cccccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer .social-icons a {
+  color: #333333;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #007bff;
+}
+@media (max-width: 576px) {
+  .footer .logo {
+    margin-top: 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .footer-clean .item.social {
-    text-align:center;
+  
+  .footer .social-icons {
+    margin-top: 15px;
   }
-}
-.footer-clean .item.social {
-  text-align: left;
-  /* margin-right: 190px; */
-  }
-
-.footer-clean .item.social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-    /* margin-top:22px; */
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-clean .item.social > a:hover {
-  opacity:0.9;
-}
-
-@media (max-width:991px) {
-  .footer-clean .item.social > a {
-    margin-top:40px;
-  }
-}
-
-@media (max-width:767px) {
-  .footer-clean .item.social > a {
-    margin-top:10px;
-  }
-}
-
-.footer-clean .copyright {
-  margin-top:14px;
-  margin-bottom:0;
-  font-size:13px;
-  opacity:0.6;
 }
 
 /* Credit to https://epicbootstrap.com/snippets/footer-with-columns */

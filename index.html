@@ -13,6 +13,13 @@
   <link href="assets/img/favicon.ico" rel="icon" />
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -28,12 +35,135 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...your-sha512-integrity-hash..." />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
- </head>
+</head>
+<style>
+  .btn-call {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-email {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .btn-whatsapp {
+    background-color: #25d366;
+    border-color: #25d366;
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* START Logo Slider */
+  .logo-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .logo-slider-container {
+    display: flex;
+    animation: logo-slider-animation 25s infinite;
+    animation-delay: -25s;
+    white-space: nowrap;
+
+  }
+
+
+  .logo-slider-item {
+    flex: 0 0 auto;
+    padding: 10px;
+    margin: 20px;
+    /* display: inline-block; */
+    transition: transform 0.8s ease;
+  }
+
+  .logo-slider-text {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 26px;
+    margin-top: 0;
+  }
+
+  .logo-slider-item img {
+    max-height: 80px;
+    transition: transform 0.8s ease;
+  }
+
+  .logo-slider-item:hover img {
+    transform: scale(1.3);
+  }
+
+  @keyframes logo-slider-animation {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+      /* transform: translateX(calc(-100% - 60px * 9)); */
+    }
+  }
+
+  
+@media (max-width: 767px) {
+
+  .logo-slider-container {
+    display: flex;
+    animation: logo-slider-animation 20s linear infinite; 
+    animation-delay: -5s;
+    /* white-space: nowrap; */
+
+  } 
+
+  .logo-slider-item img {
+    max-height: 50px;
+    transition: transform 0.4s ease;
+  }
+  @keyframes logo-slider-animation {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      /* transform: translateX(-100%); */
+      transform: translateX(calc(-100% - 60px * 9));
+    }
+  }
+}
+
+
+  /* END Logo Slider */
+
+  .container .mt-5 {
+    margin-top: 0rem !important
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 60px;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <body>
   <!-- ======= Header ======= -->
@@ -45,27 +175,7 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html"><img src="assets/img/Uma-bellows-logo.jpeg" alt="" class="img-fluid"></a>
       </div>
-      <!-- <div class="header-box">
 
-        <ul class="top-info-box">
-          <li>
-            <div class="info-box">
-              <div class="info-box-content">
-                <p class="info-box-title">Call Us</p>
-                <p class="info-box-subtitle"><a href="tel:(+91) 706-977-1940">(+91) 7069771940</a></p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="info-box">
-              <div class="info-box-content">
-                <p class="info-box-title">Email Us</p>
-                <p class="info-box-subtitle"><a href="mailto:contact@umabellows.com">contact@umabellows.com</a>
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="last"> -->
       <div class="ISO_Certificate">
         <a href="/assets/img/ISO_Certificate_Uma-Bellows.jpeg" target=”_blank”>
           <p class="Global_Certificate"> <i class="bi bi-globe"></i>
@@ -122,18 +232,45 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <br /><br />
           <h3 data-aos="fade-up">
+
             Step into the revolution of precision and excellence, where
             high-quality metal bellows redefine possibilities.
           </h3>
-          <br /><br />
+
           <h6 data-aos="fade-up" data-aos-delay="400">
+            <br /><br />
             Innovation is the harmonious fusion of talented minds, where metal
             bellows take shape with visionary design.
           </h6>
+          <br />
           <!-- <div data-aos="fade-up" data-aos-delay="800"> -->
           <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
           <!-- </div> -->
+
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="tel:+1234567890" class="btn btn-call btn-block btn-sm mb-3">
+                  <i class="bi bi-telephone-fill mr-2"></i>Call Us
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="mailto:example@example.com" class="btn btn-email btn-block btn-sm mb-3">
+                  <i class="bi bi-envelope-fill mr-2"></i>Email Us
+                </a>
+              </div>
+              <div class="col-12">
+                <a href="https://api.whatsapp.com/send?phone=+1234567890" class="btn btn-whatsapp btn-block btn-sm">
+                  <i class="bi bi-whatsapp mr-2"></i>WhatsApp Us
+                </a>
+              </div>
+            </div>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/bootstrap-icons.min.js"></script>
+
+
 
         </div>
 
@@ -168,32 +305,91 @@
   </section>
   <!-- End Hero -->
   <main id="main">
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <!-- <div class="container"> -->
-      <!-- <div class="row"> -->
-      <div class="logo-slide">
-        <img src="assets/img/clients/client-1.jpeg" class="img-fluid" alt="" />
-        <img src="assets/img/clients/client-2.jpeg" class="img-fluid" alt="" data-aos-delay="100" />
-        <img src="assets/img/clients/client-3.jpeg" class="img-fluid" alt="" data-aos-delay="200" />
-        <img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" data-aos-delay="300" />
-        <img src="assets/img/clients/logo-skaps.png.webp" class="img-fluid" alt="" data-aos-delay="500" />
-        <img src="assets/img/clients/client-6.jpeg" class="img-fluid" alt="" data-aos-delay="500" />
-        <img src="assets/img/clients/client-7.jpeg" class="img-fluid" alt="" data-aos-delay="500" />
+    <!-- Start New Client Section -->
+
+    <div class="container mt-5">
+      <h2 class="logo-slider-text">Our Clients</h2>
+      <div class="logo-slider">
+        <div class="logo-slider-container">
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-1.jpeg" alt="Logo 1">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-2.jpeg" alt="Logo 2">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-3.jpeg" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-4.webp" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/logo-skaps.png.webp" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-6.jpeg" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-7.jpeg" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-8.jpeg" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-9.jpeg" alt="Logo 3">
+          </div>
+          <div class="logo-slider-item">
+            <img src="assets/img/clients/client-10.jpeg" alt="Logo 3">
+          </div>
+          <!-- Add more logo-slider-item divs for additional logos -->
+        </div>
       </div>
-      <div class="logo-slide">
-        <img src="assets/img/clients/client-1.jpeg" class="img-fluid" alt="" />
-        <img src="assets/img/clients/client-2.jpeg" class="img-fluid" alt="" data-aos-delay="100" />
-        <img src="assets/img/clients/client-3.jpeg" class="img-fluid" alt="" data-aos-delay="200" />
-        <img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" data-aos-delay="300" />
-        <img src="assets/img/clients/logo-skaps.png.webp" class="img-fluid" alt="" data-aos-delay="500" />
-        <img src="assets/img/clients/client-6.jpeg" class="img-fluid" alt="" data-aos-delay="500" />
-        <img src="assets/img/clients/client-7.jpeg" class="img-fluid" alt="" data-aos-delay="500" />
-      </div>
-      <!-- </div>
-        </div> -->
-    </section>
-    <!-- End Clients Section -->
+    </div>
+
+
+    <script>
+      // Adjust carousel width on window resize
+      // $(window).on('resize', function () {
+      //   $('.logo-slider-container').css('width', $('.logo-slider').outerWidth());
+      // }).trigger('resize');
+
+      // $(document).ready(function () {
+      //   // Adjust slide duration (25s) as desired
+      //   var slideDuration = 25000;
+      //   $('.logo-slider-container').css({
+      //     'width': $('.logo-slider').outerWidth(),
+      //     'animation-duration': slideDuration + 'ms'
+      //   });
+
+      //   setInterval(function () {
+      //     $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
+      //   }, slideDuration);
+      // });
+
+//       $(document).ready(function() {
+//   // Adjust slide duration (25s) as desired
+//   var slideDuration = 25000;
+//   $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
+// });
+
+// $(document).ready(function() {
+//   var slideDuration = 1000;
+//   var sliderWidth = $('.logo-slider').outerWidth();
+
+//   // Adjust slide duration (25s) as desired
+//   $('.logo-slider-container').css('animation-duration', slideDuration + 'ms');
+//   $('.logo-slider-container').css('width', sliderWidth + 'px');
+
+//   // Adjust carousel width on window resize
+//   $(window).on('resize', function() {
+//     sliderWidth = $('.logo-slider').outerWidth();
+//     $('.logo-slider-container').css('width', sliderWidth + 'px');
+//   });
+// });
+
+
+    </script>
+
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -459,8 +655,8 @@
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-stretch mt-4">
-            <div class="card" style="background-image: url('assets/img/high\ pressure\ universal\ bellows.png')" data-aos="fade-up"
-              data-aos-delay="200">
+            <div class="card" style="background-image: url('assets/img/high\ pressure\ universal\ bellows.png')"
+              data-aos="fade-up" data-aos-delay="200">
               <div class="card-body">
                 <h5 class="card-title"><a href="">Pressure Balanced Bellows</a></h5>
                 <p class="card-text">
@@ -607,7 +803,8 @@
                   <!-- <h4>Designer</h4> -->
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    One of the best Companies to provide high quality expansion bellows in all categories for various industries...
+                    One of the best Companies to provide high quality expansion bellows in all categories for various
+                    industries...
 
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
@@ -625,7 +822,8 @@
                   <!-- <h4>Store Owner</h4> -->
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    A very good organization that successfully completes tasks under cost constraints and tight deadlines 🧑‍🔧
+                    A very good organization that successfully completes tasks under cost constraints and tight
+                    deadlines 🧑‍🔧
 
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
@@ -643,7 +841,8 @@
                   <!-- <h4>Freelancer</h4> -->
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    An amazing service .. fully satisfied with Product. During Visit this company, good work environment as I observed.. finished and accurate product produced by the company..
+                    An amazing service .. fully satisfied with Product. During Visit this company, good work environment
+                    as I observed.. finished and accurate product produced by the company..
 
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
@@ -713,7 +912,7 @@
             </div>
           </div>
 
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="assets/img/Metal_bellows(10).png" class="img-fluid" alt="" />
@@ -721,14 +920,14 @@
                 <h4>Card 1</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(10).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(10).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Card 1"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/Metal_Bellows(13).png" class="img-fluid" alt="" />
@@ -736,8 +935,8 @@
                 <h4>App 2</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_Bellows(13).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_Bellows(13).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="App 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -751,8 +950,8 @@
                 <h4>Card 2</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(9).PNG" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(9).PNG" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Card 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -766,8 +965,8 @@
                 <h4>Web 2</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(8).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(8).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Web 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -781,8 +980,8 @@
                 <h4>App 3</h4>
                 <p>App</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(4).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(4).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="App 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -796,8 +995,8 @@
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(3).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(3).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -811,8 +1010,8 @@
                 <h4>Card 3</h4>
                 <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(11).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(11).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Card 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -826,8 +1025,8 @@
                 <h4>Web 3</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/Metal_bellows(12).png" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Metal_bellows(12).png" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                    title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -1007,7 +1206,7 @@
 
     <!-- ======= Contact Section ======= -->
 
-
+    <!-- 
     <div class="footer-clean">
       <footer>
         <div class="container">
@@ -1029,8 +1228,8 @@
             <div class="col-sm-4 col-md-3 item">
               <h3>Services</h3>
               <ul>
-                <li><a href="#">Engineering  </a></li>
-                <li><a href="#">Fabrication  </a></li>
+                <li><a href="#">Engineering </a></li>
+                <li><a href="#">Fabrication </a></li>
                 <li><a href="#">Destructive Testing</a></li>
                 <li><a href="#">Non Destructive Testing</a></li>
               </ul>
@@ -1056,7 +1255,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
+ -->
 
     <!-- Credit to https://epicbootstrap.com/snippets/footer-with-columns -->
     <!-- <section id="contact" class="contact">
@@ -1134,11 +1333,11 @@
       </div>
     </section> -->
     <!-- End Contact Section -->
-  </main>
-  <!-- End #main -->
+    <!-- </main> -->
+    <!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+    <!-- ======= Footer ======= -->
+    <!-- <footer id="footer">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="copyright">
@@ -1146,23 +1345,82 @@
         </div>
       </div>
     </div>
-  </footer>
-  <!-- End Footer -->
+  </footer> -->
+    <!-- End Footer -->
+    <!-- START of New Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <footer class="footer bg-white text-dark py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>Social Media</h5>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <div class="mt-3">
+              <img src="assets\img\Uma-bellows-logo.jpeg" alt="Uma Bellow Logo" width="120">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5>Career</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Job Openings</a></li>
+              <li><a href="#">Apply Now</a></li>
+              <li><a href="#">Internships</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt"></i> 87/100 Puspak Ind Estate, Nika Tube Compound, Phase I, GIDC
+                Estate, Vatva, Ahmedabad-380025
+              </li>
+              <li><i class="fas fa-phone-alt"></i>+91 7069771940</li>
+              <li><i class="fas fa-envelope"></i> Contact@Umabellows.com</li>
+            </ul>
+          </div>
 
-  <!-- Uma Bellows  JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2023 Uma Bellows. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+
+    <!-- END of New Footer -->
+
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Uma Bellows  JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

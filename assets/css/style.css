@@ -78,38 +78,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
-  z-index: 997;
-  transition: all 0.5s;
-  padding: 22px 0;
-  background: #fff;
-}
 
-#header.header-scrolled {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 12px 0;
-}
-
-#header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-#header .logo h1 a,
-#header .logo h1 a:hover {
-  color: #222222;
-  text-decoration: none;
-}
-
-#header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 80px;
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -119,7 +88,7 @@ h6 {
 */
 .navbar {
   padding: 0;
-}
+ }
 
 .navbar ul {
   margin: 0;
@@ -402,7 +371,7 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 75vh;
+    height: 100vh;
   }
 
   #hero .animated {
@@ -420,8 +389,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    margin-top: 40%;
-
+    margin-top: 20px;
   }
 
   #hero h1 {

@@ -14,11 +14,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 
   <!-- Google Fonts -->
   <link
@@ -35,10 +31,20 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- Bootstrap Touch Carousel CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/css/bootstrap-touch-carousel.min.css">
+  <!-- Bootstrap Touch Carousel JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/js/bootstrap-touch-carousel.min.js"></script>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-...your-sha512-integrity-hash..." />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
 
@@ -46,23 +52,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   <!-- Bootstrap Touch Carousel CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/css/bootstrap-touch-carousel.min.css">
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap Touch Carousel JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap-touch-carousel@1.1.0/dist/js/bootstrap-touch-carousel.min.js"></script>
- 
-<!-- Bootstrap Touch Swipe JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
 </head>
 <style>
   .btn-call {
@@ -171,152 +172,237 @@
     }
   }
 
-
   /* END Logo Slider */
 
   .container .mt-5 {
-    margin-top: 0rem !important
+    margin-top: 3rem !important
   }
 
   /* Custom CSS for responsive headings */
   h1 {
     font-size: 2rem;
-    /* Adjust the font size as needed */
+
     margin-top: 5%;
   }
 
   h2 {
     font-size: 1.75rem;
-    /* Adjust the font size as needed */
+
     margin-top: 5%;
   }
 
   h3 {
     font-size: 1.5rem;
-    /* Adjust the font size as needed */
+
     margin-top: 5%;
   }
 
   h4 {
     font-size: 1.25rem;
-    /* Adjust the font size as needed */
+
   }
 
   h5 {
     font-size: 1.1rem;
-    /* Adjust the font size as needed */
+
   }
 
   h6 {
     font-size: 1rem;
-    /* Adjust the font size as needed */
+
   }
 
   /* Responsive classes for mobile and desktop */
   @media (max-width: 767px) {
     h1 {
       font-size: 1.5rem;
-      /* Adjust the font size as needed */
-     }
+
+    }
 
     h2 {
       font-size: 1.25rem;
-      /* Adjust the font size as needed */
-     }
+
+    }
 
     h3 {
       font-size: 1.1rem;
-      /* Adjust the font size as needed */
-     }
+
+    }
 
     h4 {
       font-size: 1rem;
-      /* Adjust the font size as needed */
+
     }
 
     h5 {
       font-size: 1.3rem;
-      /* Adjust the font size as needed */
+
     }
 
     h6 {
       font-size: 0.8rem;
-      /* Adjust the font size as needed */
+
     }
   }
 
+  /* Header */
+  .header {
+    background-color: #ffffff;
+     display: flex;
+    /*
+     align-items: center;
+    justify-content: space-between; */
+    margin-top: 1%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: stretch;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    width:150px;
+    height:100px;
+  }
+  .ISO_Certificate{
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-menu li {
+    list-style: none;
+    display: inline-block;
+    /* margin-left: 10px; */
+  }
+
+  .nav-menu li a {
+    text-decoration: none;
+    color: #000000;
+  }
+ 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header{
+    margin-top: 5%;
+  } 
+  .nav-menu {
+        display: none;
+    }
+  
+  .logo {
+    width:100px;
+    height:60px;
+  }
+  
+  .ISO_Certificate{
+    font-size: 14px;
+  }
+
+  .dropdown {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-right: 10px;
+      cursor: pointer;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      width: 150px;
+      padding: 10px;
+      top: 35px;
+      right: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 9999; /* Ensure the dropdown is on top of other elements */
+  }
+
+  .dropdown.open .dropdown-content {
+      display: block;
+  }
+
+  .dropdown-content a {
+      display: block;
+      margin: 5px 0;
+      color: #000000;
+      text-decoration: none;
+  }
+}
+      /* Desktop Styles */
+      @media (min-width: 769px) {
+  .dropdown {
+      display: none;
+      
+  }
+
+  .nav-menu {
+      margin-left: 20px;
+  }
+
+  .nav-menu li {
+      margin-left: 20px;
+  }
+}
+
 
 </style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <body>
   <!-- ======= Header ======= -->
 
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div class="logo">
-        <!-- <h1><a href="index.html">Uma Bellows</a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/Uma-bellows-logo.jpeg" alt="" class="img-fluid"></a>
-      </div>
-
-      <div class="ISO_Certificate">
-        <a href="/assets/img/ISO_Certificate_Uma-Bellows.jpeg" target=”_blank”>
-          <p class="Global_Certificate"> <i class="bi bi-globe"></i>
-            Global Certificate</p>
-          <p class="ISO_9001"> <i class="bi bi-patch-check-fill"></i> ISO 9001:2015</p>
-        </a>
-      </div>
-      <!-- </li>
-        </ul>
-      </div> -->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li>
-            <a class="nav-link scrollto" href="#portfolio">Portfolio</a>
-          </li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li>
-            <a class="nav-link scrollto" href="#Applications">Applications</a>
-          </li>
-          <li><a class="nav-link scrollto" href="#about">Company</a></li>
-
-          <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/Uma-bellows-logo.jpeg" alt="" class="img-fluid" ></a>
     </div>
-  </header>
+    <div class="ISO_Certificate">
+      <a href="/assets/img/ISO_Certificate_Uma-Bellows.jpeg" target="”_blank”">
+        <p class="Global_Certificate"> <i class="bi bi-globe"></i>
+          Global Certificate</p>
+        <p class="ISO_9001"> <i class="bi bi-patch-check-fill"></i> ISO 9001:2015</p>
+      </a>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+    <div class="dropdown" onclick="toggleDropdown()">
+        <span>☰</span>
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Products</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</header>
+
   <!-- End Header -->
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <br /><br />
           <h3 data-aos="fade-up">
 
@@ -347,16 +433,15 @@
                 </a>
               </div>
               <div class="col-12">
-                <a href="https://api.whatsapp.com/send?phone=+91 7068771940" class="btn btn-whatsapp btn-block btn-sm">
-                  <i class="bi bi-whatsapp mr-2"></i>WhatsApp Us
+
+                <a href="https://wa.me/917069771940" class="btn btn-whatsapp btn-block btn-sm" target="_blank"><i
+                    class="bi bi-whatsapp mr-2"></i>What's app Us!</a>
+
+
                 </a>
               </div>
             </div>
           </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/bootstrap-icons.min.js"></script>
-
-
-
         </div>
 
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">

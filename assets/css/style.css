@@ -1681,6 +1681,6 @@ section {
         flex: 0 0 15%;
         padding: 1px;
         margin: 2px;
-        max-width: 80%;
+        max-width: 100%;
       }
     }

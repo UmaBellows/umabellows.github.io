@@ -1674,6 +1674,10 @@ section {
        flex: 0 0 20%;
       max-width: 50%;
     }
+    .container .mt-5 .col-md-6  a{
+      border-radius: 20px;
+      padding: 10px 20px;
+    }
   }
 
   @media (max-width: 768px){
@@ -1682,5 +1686,9 @@ section {
         padding: 1px;
         margin: 2px;
         max-width: 100%;
+      }
+      .container .mt-5 .col-md-6  a{
+        border-radius: 15px;
+        padding: 5px 15px;
       }
     }

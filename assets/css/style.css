@@ -1675,7 +1675,7 @@ section {
     .container .mt-5 .col-md-6 {
         flex: 0 0 15%;
         padding: 1px;
-        margin: 5px;
-        max-width: 50%;
+        margin: 2px;
+        max-width: 80%;
       }
     }

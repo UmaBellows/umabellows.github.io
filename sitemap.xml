@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://umabellows.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://umabellows.com/products/</loc><priority>0.9</priority></url>
+  <url><loc>https://umabellows.com/products/metal-bellows/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/products/expansion-joints/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/products/dismantling-joints/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/products/pressure-balanced/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/case-studies/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/industries/</loc><priority>0.7</priority></url>
+  <url><loc>https://umabellows.com/certifications/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/team/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/facility/</loc><priority>0.5</priority></url>
+  <url><loc>https://umabellows.com/careers/</loc><priority>0.5</priority></url>
+  <url><loc>https://umabellows.com/faq/</loc><priority>0.5</priority></url>
+  <url><loc>https://umabellows.com/resources/</loc><priority>0.4</priority></url>
+  <url><loc>https://umabellows.com/insights/</loc><priority>0.4</priority></url>
+  <url><loc>https://umabellows.com/contact/</loc><priority>0.9</priority></url>
+  <url><loc>https://umabellows.com/Privacy-Policy.html</loc><priority>0.3</priority></url>
+  <!-- /terms/ intentionally excluded: draft, noindex, pending legal review -->
+</urlset>

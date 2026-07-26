@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://umabellows.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://umabellows.com/about/</loc><priority>0.8</priority></url>
   <url><loc>https://umabellows.com/products/</loc><priority>0.9</priority></url>
   <url><loc>https://umabellows.com/products/metal-bellows/</loc><priority>0.8</priority></url>
   <url><loc>https://umabellows.com/products/expansion-joints/</loc><priority>0.8</priority></url>
   <url><loc>https://umabellows.com/products/dismantling-joints/</loc><priority>0.8</priority></url>
   <url><loc>https://umabellows.com/products/pressure-balanced/</loc><priority>0.8</priority></url>
+  <url><loc>https://umabellows.com/products/rectangular-bellows/</loc><priority>0.7</priority></url>
+  <url><loc>https://umabellows.com/products/axial-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/lateral-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/angular-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/gimbal-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/tied-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/swivel-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/torsional-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/telescopic-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/in-line-ball-joint-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/externally-pressurized-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/metal-expansion-joint/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/multi-ply-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/reinforced-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/high-pressure-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/expansion-bellows-with-liners/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/composite-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/convoluted-pump-connector-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/cryogenic-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/vacuum-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/thermal-sleeve-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/high-cycle-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/products/exhaust-bellows/</loc><priority>0.6</priority></url>
+  <url><loc>https://umabellows.com/gallery/</loc><priority>0.5</priority></url>
   <url><loc>https://umabellows.com/case-studies/</loc><priority>0.8</priority></url>
   <url><loc>https://umabellows.com/industries/</loc><priority>0.7</priority></url>
   <url><loc>https://umabellows.com/certifications/</loc><priority>0.6</priority></url>

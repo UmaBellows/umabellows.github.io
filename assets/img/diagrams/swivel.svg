@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Swivel expansion joint schematic — rotation about the pipe's own longitudinal axis</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="150" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M150,130 L165,170 L180,130 L195,170 L210,130 L225,170 L240,130 L255,170" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="255" y1="150" x2="370" y2="150" stroke="#2B3238" stroke-width="10"/>
+<ellipse cx="200" cy="150" rx="55" ry="16" fill="none" stroke="#2B5C73" stroke-width="3" stroke-dasharray="3 5"/>
+<path d="M245,140 A55,16 0 0 1 245,160" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrS)"/>
+<defs><marker id="arrS" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">ROTATION ABOUT PIPE AXIS</text>
+<text x="200" y="220" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">SWIVEL JOINT — NO BENDING OF THE BELLOWS ITSELF</text>
+</svg>

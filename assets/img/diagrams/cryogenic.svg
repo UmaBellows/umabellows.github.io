@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Cryogenic bellows schematic — inner bellows with an insulating outer jacket</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<rect x="110" y="90" width="180" height="80" rx="18" fill="none" stroke="#2B5C73" stroke-width="3" stroke-dasharray="5 5"/>
+<line x1="30" y1="130" x2="140" y2="130" stroke="#2B3238" stroke-width="10"/>
+<path d="M140,110 L155,150 L170,110 L185,150 L200,110 L215,150 L230,110 L245,150 L260,110" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="260" y1="130" x2="370" y2="130" stroke="#2B3238" stroke-width="10"/>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">CRYOGENIC / INSULATED</text>
+<text x="200" y="210" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">OUTER JACKET INSULATES AGAINST EXTREME LOW TEMPERATURE</text>
+</svg>

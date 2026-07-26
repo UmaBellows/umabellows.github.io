@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Tied expansion joint schematic — tie rods restrain pressure thrust across the bellows</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="130" x2="140" y2="130" stroke="#2B3238" stroke-width="10"/>
+<line x1="260" y1="130" x2="370" y2="130" stroke="#2B3238" stroke-width="10"/>
+<path d="M140,110 L155,150 L170,110 L185,150 L200,110 L215,150 L230,110 L245,150 L260,110" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="130" y="70" width="20" height="14" fill="#2B5C73"/>
+<rect x="250" y="70" width="20" height="14" fill="#2B5C73"/>
+<line x1="140" y1="77" x2="260" y2="77" stroke="#2B5C73" stroke-width="4"/>
+<rect x="130" y="176" width="20" height="14" fill="#2B5C73"/>
+<rect x="250" y="176" width="20" height="14" fill="#2B5C73"/>
+<line x1="140" y1="183" x2="260" y2="183" stroke="#2B5C73" stroke-width="4"/>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">TIE RODS RESTRAIN THRUST</text>
+<text x="200" y="220" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">RODS CARRY PRESSURE THRUST, NOT THE ANCHORS</text>
+</svg>

@@ -22,13 +22,9 @@
     <a class="brand" href="/">
       <img src="/assets/img/Uma-bellows-logo.jpeg" alt="Uma Bellows logo">
       <span class="brand-text">Uma Bellows</span>
-    </a>
-    <a class="iso" href="/assets/img/ISO_Certificate_Uma-Bellows.jpeg" target="_blank" rel="noopener">
-      <span>Certified<b>ISO 9001:2015</b></span>
-    </a>
-    <nav class="primary-nav" aria-label="Primary">
+    </a>    <nav class="primary-nav" aria-label="Primary">
       <a href="/" aria-current="page">Home</a>
-      <a href="/#about">About</a>
+      <a href="/about/">About</a>
       <a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
       <a href="/#services">Services</a>
       <a href="/#industries">Industries</a>
@@ -43,7 +39,7 @@
   </div>
   <div class="wrap mobile-nav">
     <a href="/">Home</a>
-    <a href="/#about">About</a>
+    <a href="/about/">About</a>
     <a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
     <a href="/#services">Services</a>
     <a href="/#industries">Industries</a>
@@ -74,14 +70,26 @@
           <a href="tel:+917069771940" class="btn btn-outline">Call Us</a>
         </div>
       </div>
-      <div class="hero-media">
-        <img src="/assets/img/Slider-3.jpeg" alt="Uma Bellows metal bellows and expansion joint assembly">
+      <div class="hero-media hero-slider" data-hero-slider data-interval="5000">
+        <div class="hero-slide is-active"><img src="/assets/img/Slider-3.jpeg" alt="Uma Bellows metal bellows and expansion joint assembly"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/bellows/metal-bellows-branded-stack.png" alt="Stacked metal bellows elements"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/dj/dj-1800-nb.png" alt="DJ 1800 NB large-bore dismantling joint"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/dj/dj-2400-nb.png" alt="DJ 2400 NB large-bore dismantling joint"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/ej/ej-010-high-temp.png" alt="High temperature expansion joint"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/ej/ej-02.png" alt="Expansion joint"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/pej/pej-01.png" alt="Pressure balanced expansion joint"></div>
+        <div class="hero-slide"><img src="/assets/img/catalog/uej/uej-01.jpeg" alt="Universal expansion joint"></div>
+        <div class="hero-slide"><img src="/assets/img/facility/yard-finished-bellows-1.jpg" alt="Finished metal bellows unit ready for dispatch"></div>
+        <div class="hero-slide"><img src="/assets/img/team/fabrication-technician-1.png" alt="Fabrication technician at Uma Bellows"></div>
+        <button type="button" class="hero-slider-arrow prev" aria-label="Previous image">‹</button>
+        <button type="button" class="hero-slider-arrow next" aria-label="Next image">›</button>
+        <div class="hero-slider-dots" role="tablist" aria-label="Slide selector"></div>
       </div>
     </div>
   </section>
 
   <!-- Clients marquee -->
-  <section class="clients">
+  <section id="clients" class="clients">
     <div class="wrap">
       <span class="eyebrow">Trusted by</span>
       <div class="marquee">
@@ -100,6 +108,15 @@
           <img src="/assets/img/clients-real/phed-odisha.png" alt="PHED Odisha">
           <img src="/assets/img/clients-real/phed-west-bengal.jpg" alt="PHED West Bengal">
           <img src="/assets/img/clients-real/phed-rajasthan.png" alt="PHED Rajasthan">
+          <img src="/assets/img/clients-real/hal-offshore-ongc.jpeg" alt="HAL Offshore Ltd and ONGC">
+          <img src="/assets/img/clients-real/gwssb.jpeg" alt="Gujarat Water Supply and Sewerage Board (GWSSB)">
+          <img src="/assets/img/clients-real/indianoil.jpeg" alt="IndianOil">
+          <img src="/assets/img/clients-real/npcil.webp" alt="Nuclear Power Corporation of India Limited (NPCIL)">
+          <img src="/assets/img/clients-real/prashant-group.jpeg" alt="Prashant Group">
+          <img src="/assets/img/clients-real/cummins.jpeg" alt="Cummins">
+          <img src="/assets/img/clients-real/gwil.jpeg" alt="Gujarat Water Infrastructure Limited (GWIL)">
+          <img src="/assets/img/clients-real/amc.jpeg" alt="Ahmedabad Municipal Corporation (AMC)">
+          <img src="/assets/img/clients-real/wrd-gujarat.jpeg" alt="Gujarat Water Resources Department (WRD)">
           <!-- duplicated for seamless marquee loop -->
           <img src="/assets/img/clients-real/adani.png" alt="" aria-hidden="true">
           <img src="/assets/img/clients-real/sail.jpg" alt="" aria-hidden="true">
@@ -115,6 +132,15 @@
           <img src="/assets/img/clients-real/phed-odisha.png" alt="" aria-hidden="true">
           <img src="/assets/img/clients-real/phed-west-bengal.jpg" alt="" aria-hidden="true">
           <img src="/assets/img/clients-real/phed-rajasthan.png" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/hal-offshore-ongc.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/gwssb.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/indianoil.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/npcil.webp" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/prashant-group.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/cummins.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/gwil.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/amc.jpeg" alt="" aria-hidden="true">
+          <img src="/assets/img/clients-real/wrd-gujarat.jpeg" alt="" aria-hidden="true">
         </div>
       </div>
     </div>
@@ -137,6 +163,7 @@
             <li>Destructive &amp; non-destructive testing on every line</li>
             <li>Custom-engineered configurations, not off-the-shelf</li>
           </ul>
+          <a href="/about/" class="more" style="display:inline-block; margin-top:.8rem;">Learn more about us →</a>
         </div>
       </div>
 
@@ -282,7 +309,7 @@
   </section>
 
   <!-- Certifications -->
-  <section id="clients" class="section">
+  <section id="certifications" class="section">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Certifications</div>
@@ -379,7 +406,7 @@
     <div>
       <h5>Company</h5>
       <ul>
-        <li><a href="/#about">About</a></li>
+        <li><a href="/about/">About</a></li>
         <li><a href="/facility/">Facility</a></li>
         <li><a href="/team/">Team</a></li>
         <li><a href="/careers/">Careers</a></li>
@@ -403,19 +430,20 @@
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/resources/">Downloads</a></li>
         <li><a href="/insights/">Insights</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
       </ul>
     </div>
     <div>
       <h5>Contact</h5>
       <ul>
-        <li>87/100 Pushpak Industrial Estate, Nika Tube Compound, Phase I, GIDC Estate, Vatva, Ahmedabad – 380025, Gujarat</li>
+        <li>Plot No. 12, 13, 14, 15 & 16, Matrubhumi Industrial Park-3, Near Mahakali Mandir, Kubadthal, Ahmedabad – 382430, Gujarat</li>
         <li><a href="tel:+917069771940">+91 70697 71940</a></li>
         <li><a href="mailto:contact@umabellows.com">contact@umabellows.com</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap bottom">
-    <span>© 2026 Uma Bellows. All rights reserved.</span>
+    <span>© 2026 Uma Bellows. All rights reserved. Uma Bellows is the trade name of Uma Engineering Solution.</span>
     <span><a href="/Privacy-Policy.html" style="color:#8B8578;">Privacy Policy</a></span>
   </div>
 </footer>

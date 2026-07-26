@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Convoluted pump connector bellows schematic — flexible connector isolates pump vibration from piping</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<rect x="30" y="110" width="70" height="60" rx="6" fill="#2B3238"/>
+<text x="65" y="145" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="11" fill="#F4F5F4">PUMP</text>
+<path d="M100,130 L115,150 L130,130 L145,150 L160,130 L175,150 L190,130" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="190" y1="140" x2="370" y2="140" stroke="#2B3238" stroke-width="10"/>
+<g stroke="#2B5C73" stroke-width="2.5" fill="none">
+<path d="M65,105 q-10,-15 0,-30" marker-end="url(#arrP)"/>
+<path d="M65,175 q-10,15 0,30" marker-end="url(#arrP)"/>
+</g>
+<defs><marker id="arrP" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#2B5C73"/></marker></defs>
+<text x="230" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">VIBRATION ISOLATION</text>
+<text x="230" y="210" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">CONNECTOR ABSORBS PUMP VIBRATION BEFORE IT REACHES RIGID PIPING</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Exhaust bellows schematic — flexible section absorbs engine movement and thermal expansion in an exhaust run</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<rect x="30" y="100" width="80" height="70" rx="6" fill="#2B3238"/>
+<text x="70" y="140" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="10" fill="#F4F5F4">ENGINE</text>
+<line x1="110" y1="135" x2="150" y2="135" stroke="#2B3238" stroke-width="9"/>
+<path d="M150,118 L163,152 L176,118 L189,152 L202,118 L215,152" fill="none" stroke="#9C6428" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="215" y1="135" x2="370" y2="135" stroke="#2B3238" stroke-width="9"/>
+<text x="230" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">ENGINE-SIDE FLEXIBILITY</text>
+<text x="230" y="210" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">ABSORBS ENGINE MOVEMENT AND THERMAL GROWTH IN THE EXHAUST RUN</text>
+</svg>

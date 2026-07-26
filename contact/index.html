@@ -18,18 +18,17 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/"><img src="/assets/img/Uma-bellows-logo.jpeg" alt="Uma Bellows logo"><span class="brand-text">Uma Bellows</span></a>
-    <a class="iso" href="/assets/img/ISO_Certificate_Uma-Bellows.jpeg" target="_blank" rel="noopener"><span>Certified<b>ISO 9001:2015</b></span></a>
-    <nav class="primary-nav" aria-label="Primary">
-      <a href="/">Home</a><a href="/#about">About</a><a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
+    <a class="brand" href="/"><img src="/assets/img/Uma-bellows-logo.jpeg" alt="Uma Bellows logo"><span class="brand-text">Uma Bellows</span></a>    <nav class="primary-nav" aria-label="Primary">
+      <a href="/">Home</a><a href="/about/">About</a><a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
       <a href="/#services">Services</a><a href="/#industries">Industries</a><a href="/facility/">Facility</a><a href="/team/">Team</a><a href="/contact/" aria-current="page">Contact</a>
     </nav>
     <div class="cta-slot"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
   <div class="wrap mobile-nav">
-    <a href="/">Home</a><a href="/#about">About</a><a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
+    <a href="/">Home</a><a href="/about/">About</a><a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
     <a href="/#services">Services</a><a href="/#industries">Industries</a><a href="/facility/">Facility</a><a href="/team/">Team</a><a href="/contact/">Contact</a>
+    <a href="/contact/" class="btn btn-primary" style="margin-top:.5rem; text-align:center;">Request a Quote</a>
   </div>
 </header>
 
@@ -44,14 +43,19 @@
         <div>
           <h3 style="font-size:.95rem;">Request a Quote</h3>
           <!--
-            No third-party form service (e.g. Formspree) has been wired up yet —
-            that requires a separate account/API key decision. This form uses a
-            zero-dependency mailto submission so it works immediately on GitHub
-            Pages with no external service. Swap the action/method/enctype below
-            for a form-backend endpoint if in-page submission (no email client
-            popup) is wanted later.
+            Powered by FormSubmit.co — no account/API key needed, but the FIRST
+            submission triggers a one-time activation email from FormSubmit to
+            contact@umabellows.com. Someone with access to that inbox must click
+            the activation link in that email before submissions start arriving
+            normally. Until activated, FormSubmit shows its own confirmation
+            page instead of redirecting to _next.
           -->
-          <form class="form-grid" action="mailto:contact@umabellows.com" method="post" enctype="text/plain">
+          <form class="form-grid" action="https://formsubmit.co/contact@umabellows.com" method="POST">
+            <input type="hidden" name="_subject" value="New Quote Request — Uma Bellows Website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://umabellows.com/contact/thank-you/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div>
               <label for="name">Name</label>
               <input type="text" id="name" name="Name" required>
@@ -75,7 +79,8 @@
                 <option>Expansion Joints</option>
                 <option>Dismantling Joints</option>
                 <option>Pressure Balanced Bellows</option>
-                <option>Not sure / other</option>
+                <option>Rectangular Bellows</option>
+                <option>Other — see full product list</option>
               </select>
             </div>
             <div>
@@ -83,7 +88,7 @@
               <textarea id="message" name="Message" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Request</button>
-            <p class="form-note">Submitting opens your email client addressed to contact@umabellows.com — nothing is sent silently.</p>
+            <p class="form-note">Submits directly — no email client required. We'll respond to the email address you provide.</p>
           </form>
         </div>
 
@@ -95,8 +100,7 @@
             <li><a href="https://api.whatsapp.com/send?phone=917069771940&text=Hello%20there!%20I%20am%20looking%20for%20Bellows%20Manufacturer." target="_blank" rel="noopener">WhatsApp: +91 70697 71940</a></li>
           </ul>
           <h3 style="font-size:.95rem; margin-top:2rem;">Address</h3>
-          <p style="font-size:.92rem;">87/100 Pushpak Industrial Estate,<br>Nika Tube Compound, Phase I,<br>GIDC Estate, Vatva,<br>Ahmedabad – 380025, Gujarat, India</p>
-          <p style="font-size:.8rem; color:var(--steel-600); font-family:Bahnschrift,sans-serif; text-transform:none;">Address corrected from two conflicting versions found in the previous site build — please confirm against registered signage.</p>
+          <p style="font-size:.92rem;">Plot No. 12, 13, 14, 15 &amp; 16,<br>Matrubhumi Industrial Park-3,<br>Near Mahakali Mandir, Beside Brothers Fast Tech Pvt. Ltd.,<br>Kubadthal, Ahmedabad – 382430, Gujarat, India</p>
         </div>
       </div>
     </div>
@@ -106,7 +110,7 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div><div class="logo-mark"><img src="/assets/img/Uma-bellows-logo.jpeg" alt="Uma Bellows logo"></div></div>
-    <div><h5>Company</h5><ul><li><a href="/#about">About</a></li><li><a href="/facility/">Facility</a></li><li><a href="/team/">Team</a></li><li><a href="/careers/">Careers</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="/about/">About</a></li><li><a href="/facility/">Facility</a></li><li><a href="/team/">Team</a></li><li><a href="/careers/">Careers</a></li></ul></div>
     <div><h5>Products</h5><ul>
       <li><a href="/products/metal-bellows/">Metal Bellows</a></li>
       <li><a href="/products/expansion-joints/">Expansion Joints</a></li>
@@ -120,14 +124,15 @@
       <li><a href="/faq/">FAQ</a></li>
       <li><a href="/resources/">Downloads</a></li>
       <li><a href="/insights/">Insights</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
     </ul></div>
     <div><h5>Contact</h5><ul>
-      <li>87/100 Pushpak Industrial Estate, Vatva, Ahmedabad – 380025</li>
+      <li>Plot 12-16, Matrubhumi Industrial Park-3, Kubadthal, Ahmedabad – 382430</li>
       <li><a href="tel:+917069771940">+91 70697 71940</a></li>
       <li><a href="mailto:contact@umabellows.com">contact@umabellows.com</a></li>
     </ul></div>
   </div>
-  <div class="wrap bottom"><span>© 2026 Uma Bellows. All rights reserved.</span><span><a href="/Privacy-Policy.html" style="color:#8B8578;">Privacy Policy</a></span></div>
+  <div class="wrap bottom"><span>© 2026 Uma Bellows. All rights reserved. Uma Bellows is the trade name of Uma Engineering Solution.</span><span><a href="/Privacy-Policy.html" style="color:#8B8578;">Privacy Policy</a></span></div>
 </footer>
 <script src="/assets/js/site.js"></script>
 </body>

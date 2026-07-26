@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Thermal sleeve bellows schematic — a sliding sleeve shields the bellows from direct flow temperature</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="370" y2="150" stroke="#2B3238" stroke-width="14"/>
+<path d="M150,120 L165,160 L180,120 L195,160 L210,120 L225,160 L240,120" fill="none" stroke="#9C6428" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="140" y="142" width="110" height="16" rx="8" fill="#2B5C73" opacity=".8"/>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">INTERNAL THERMAL SLEEVE</text>
+<text x="200" y="215" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">SLEEVE SHIELDS THE BELLOWS FROM DIRECT FLOW TEMPERATURE</text>
+</svg>

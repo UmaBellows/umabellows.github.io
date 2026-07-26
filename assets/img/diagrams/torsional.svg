@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Torsional bellows schematic — the convolutions themselves twist about the pipe axis</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="140" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M140,125 C160,175 180,125 200,150 C220,175 240,125 260,150" fill="none" stroke="#9C6428" stroke-width="8" stroke-linecap="round"/>
+<line x1="260" y1="150" x2="370" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M160,95 A40,40 0 0 1 200,75" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrT)"/>
+<path d="M240,205 A40,40 0 0 1 200,225" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrT)"/>
+<defs><marker id="arrT" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">TORSIONAL TWIST</text>
+<text x="200" y="240" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">CONVOLUTIONS FLEX UNDER A TWISTING LOAD</text>
+</svg>

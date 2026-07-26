@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Lateral (universal) expansion joint schematic — perpendicular offset between two bellows</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="20" y1="150" x2="110" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M110,130 L125,170 L140,130 L155,170" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="155" y1="150" x2="215" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M215,130 L230,170 L245,130 L260,170" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="260" y1="150" x2="370" y2="110" stroke="#2B3238" stroke-width="10"/>
+<g stroke="#2B5C73" stroke-width="3" fill="none">
+<line x1="300" y1="150" x2="300" y2="110" marker-end="url(#arrL)"/>
+</g>
+<defs><marker id="arrL" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">LATERAL OFFSET</text>
+<text x="200" y="220" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">TWO BELLOWS ABSORB SIDEWAYS PIPE MISALIGNMENT</text>
+</svg>

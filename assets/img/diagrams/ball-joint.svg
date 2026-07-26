@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">In-line ball joint bellows schematic — ball-and-socket rotation at the joint</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="160" y2="150" stroke="#2B3238" stroke-width="10"/>
+<circle cx="200" cy="150" r="42" fill="none" stroke="#9C6428" stroke-width="8"/>
+<circle cx="200" cy="150" r="20" fill="#2B5C73"/>
+<line x1="240" y1="150" x2="370" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M200,95 A55,55 0 0 1 245,120" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrBJ)"/>
+<path d="M200,205 A55,55 0 0 1 155,180" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrBJ)"/>
+<defs><marker id="arrBJ" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">BALL-AND-SOCKET ROTATION</text>
+<text x="200" y="230" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">A SEALED BELLOWS ELEMENT INSIDE THE BALL JOINT</text>
+</svg>

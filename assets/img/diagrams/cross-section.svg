@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Multi-ply / reinforced bellows cross-section schematic — layered plies with a reinforcing ring</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<path d="M100,180 L100,80 Q100,60 130,60 L270,60 Q300,60 300,80 L300,180" fill="none" stroke="#55606A" stroke-width="2" stroke-dasharray="3 4"/>
+<path d="M120,175 C160,140 240,140 280,175" fill="none" stroke="#9C6428" stroke-width="6"/>
+<path d="M126,158 C162,128 238,128 274,158" fill="none" stroke="#9C6428" stroke-width="6"/>
+<path d="M132,141 C165,116 235,116 268,141" fill="none" stroke="#9C6428" stroke-width="6"/>
+<circle cx="200" cy="150" r="6" fill="#2B5C73"/>
+<line x1="150" y1="150" x2="250" y2="150" stroke="#2B5C73" stroke-width="4" stroke-dasharray="6 4"/>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">LAYERED PLY CONSTRUCTION</text>
+<text x="200" y="225" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">MULTIPLE THIN PLIES, OR A REINFORCING RING, ADD STRENGTH WITHOUT LOSING FLEXIBILITY</text>
+</svg>

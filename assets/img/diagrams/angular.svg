@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Angular (hinged) expansion joint schematic — rotation about a single hinge pin</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="120" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M120,130 L135,170 L150,130 L165,170 L180,130 L195,170" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="195" y1="150" x2="300" y2="150" stroke="#2B3238" stroke-width="10"/>
+<line x1="300" y1="150" x2="360" y2="115" stroke="#2B3238" stroke-width="10" stroke-dasharray="2 6" opacity=".5"/>
+<circle cx="157" cy="150" r="8" fill="#2B5C73"/>
+<path d="M300,120 A45,45 0 0 1 340,150" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrA)"/>
+<defs><marker id="arrA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">ANGULAR ROTATION</text>
+<text x="200" y="220" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">HINGE PIN LIMITS MOVEMENT TO A SINGLE PLANE</text>
+</svg>

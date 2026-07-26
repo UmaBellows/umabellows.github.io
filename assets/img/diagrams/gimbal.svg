@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t">
+<title id="t">Gimbal expansion joint schematic — two pairs of hinges on a gimbal ring allow rotation in any plane</title>
+<rect width="400" height="260" fill="#F4F5F4"/>
+<line x1="30" y1="150" x2="120" y2="150" stroke="#2B3238" stroke-width="10"/>
+<path d="M120,130 L135,170 L150,130 L165,170 L180,130 L195,170" fill="none" stroke="#9C6428" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="157" cy="150" rx="42" ry="42" fill="none" stroke="#2B5C73" stroke-width="3" stroke-dasharray="4 5"/>
+<line x1="195" y1="150" x2="300" y2="150" stroke="#2B3238" stroke-width="10"/>
+<circle cx="157" cy="150" r="7" fill="#2B5C73"/>
+<circle cx="157" cy="110" r="5" fill="#2B5C73"/>
+<circle cx="157" cy="190" r="5" fill="#2B5C73"/>
+<path d="M300,120 A45,45 0 0 1 340,150" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrG)"/>
+<path d="M300,180 A45,45 0 0 0 340,150" fill="none" stroke="#2B5C73" stroke-width="3" marker-end="url(#arrG)"/>
+<defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2B5C73"/></marker></defs>
+<text x="200" y="45" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="15" fill="#2B5C73" letter-spacing="1">MULTI-PLANE ROTATION</text>
+<text x="200" y="230" text-anchor="middle" font-family="Bahnschrift,Arial" font-size="12" fill="#55606A" letter-spacing="1">GIMBAL RING PERMITS ROTATION IN ANY DIRECTION</text>
+</svg>

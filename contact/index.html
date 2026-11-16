@@ -58,23 +58,24 @@
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div>
               <label for="name">Name</label>
-              <input type="text" id="name" name="Name" required>
+              <input type="text" id="name" name="Name" autocomplete="name" required>
             </div>
             <div>
               <label for="company">Company</label>
-              <input type="text" id="company" name="Company">
+              <input type="text" id="company" name="Company" autocomplete="organization">
             </div>
             <div>
               <label for="email">Email</label>
-              <input type="email" id="email" name="Email" required>
+              <input type="email" id="email" name="Email" autocomplete="email" required>
             </div>
             <div>
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="Phone">
+              <input type="tel" id="phone" name="Phone" autocomplete="tel">
             </div>
             <div>
               <label for="product">Product of Interest</label>
               <select id="product" name="Product">
+                <option value="">Select a product…</option>
                 <option>Metal Bellows</option>
                 <option>Expansion Joints</option>
                 <option>Dismantling Joints</option>
@@ -88,7 +89,7 @@
               <textarea id="message" name="Message" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Request</button>
-            <p class="form-note">Submits directly — no email client required. We'll respond to the email address you provide.</p>
+            <p class="form-note">Submits directly — no email client required. Your details are delivered to us through FormSubmit and used only to answer your enquiry; see our <a href="/Privacy-Policy.html">Privacy Policy</a>.</p>
           </form>
         </div>
 
@@ -123,7 +124,6 @@
       <li><a href="/industries/">Industries</a></li>
       <li><a href="/faq/">FAQ</a></li>
       <li><a href="/resources/">Downloads</a></li>
-      <li><a href="/insights/">Insights</a></li>
       <li><a href="/gallery/">Gallery</a></li>
     </ul></div>
     <div><h5>Contact</h5><ul>

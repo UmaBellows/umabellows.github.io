@@ -39,8 +39,7 @@
   <url><loc>https://umabellows.com/careers/</loc><priority>0.5</priority></url>
   <url><loc>https://umabellows.com/faq/</loc><priority>0.5</priority></url>
   <url><loc>https://umabellows.com/resources/</loc><priority>0.4</priority></url>
-  <url><loc>https://umabellows.com/insights/</loc><priority>0.4</priority></url>
   <url><loc>https://umabellows.com/contact/</loc><priority>0.9</priority></url>
   <url><loc>https://umabellows.com/Privacy-Policy.html</loc><priority>0.3</priority></url>
-  <!-- /terms/ intentionally excluded: draft, noindex, pending legal review -->
+  <!-- /terms/ and /insights/ intentionally excluded: noindex until their content is ready -->
 </urlset>

@@ -80,8 +80,20 @@
   // Hero slider. Autoplays with a pause/play button (WCAG 2.2.2). Hovering
   // pauses it; keyboard focus inside it stops it until Play is pressed; it
   // never runs while the tab is hidden or when reduced motion is requested.
+  // Only the first photo is in the page's src; the others carry data-src /
+  // data-srcset and are fetched when shown, plus the next one once the page
+  // has loaded, so opening the homepage downloads one hero photo, not ten.
   var slider = document.querySelector("[data-hero-slider]");
   var slides = slider ? Array.prototype.slice.call(slider.querySelectorAll(".hero-slide")) : [];
+  var loadSlide = function (slide) {
+    var img = slide && slide.querySelector("img[data-src]");
+    if (!img) return;
+    if (img.hasAttribute("data-srcset")) img.setAttribute("srcset", img.getAttribute("data-srcset"));
+    img.setAttribute("src", img.getAttribute("data-src"));
+    img.removeAttribute("data-srcset");
+    img.removeAttribute("data-src");
+  };
+  if (slides.length === 1) loadSlide(slides[0]);
   if (slides.length > 1) {
     var dotsWrap = slider.querySelector(".hero-slider-dots");
     var prevBtn = slider.querySelector(".hero-slider-arrow.prev");
@@ -110,7 +122,10 @@
       dotsWrap.appendChild(b);
       return b;
     });
+    var pageLoaded = document.readyState === "complete";
     var render = function () {
+      loadSlide(slides[current]);
+      if (pageLoaded) loadSlide(slides[(current + 1) % slides.length]);
       slides.forEach(function (s, i) {
         var on = i === current;
         s.classList.toggle("is-active", on);
@@ -160,6 +175,10 @@
       }
     });
     document.addEventListener("visibilitychange", restartTimer);
+    window.addEventListener("load", function () {
+      pageLoaded = true;
+      loadSlide(slides[(current + 1) % slides.length]);
+    });
 
     render();
     syncPlayButton();

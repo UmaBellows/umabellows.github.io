@@ -4,9 +4,11 @@
 Usage:
     python tools/check_site.py            # run all checks; exit 1 on any error
     python tools/check_site.py --weights  # also print image weight per page
+                                          # (largest and smallest version of each image)
 
 Checks:
-  * every internal link, image and form target resolves to a file in the site
+  * every internal link, image (src, srcset, data-src) and form target resolves
+  * every <img> has width and height, and no image file is over 1 MB
   * every #anchor exists on the page it points to
   * sitemap.xml lists every indexable page and nothing that is noindex/missing
   * indexable pages contain no draft or placeholder text
@@ -31,6 +33,7 @@ DRAFT_PATTERNS = [
 ]
 # Known draft text that a planned change will remove: (page, matched text) -> reason.
 # Reported as a warning, not an error. Delete the entry when the fix lands.
+MAX_IMAGE_BYTES = 1_000_000
 PENDING = {
     ("certifications/index.html", "before publishing"):
         "ISO note, replaced in roadmap Phase 1C once the certificate status is confirmed",
@@ -51,14 +54,28 @@ class PageParser(HTMLParser):
             self.ids.add(a["id"])
         if tag == "a" and "name" in a:
             self.ids.add(a["name"])
-        for attr in ("href", "src", "action"):
+        for attr in ("href", "src", "action", "data-src"):
             if a.get(attr):
                 self.refs.append((attr, a[attr]))
-        if tag == "img" and a.get("src"):
-            self.imgs.append(a["src"])
+        for attr in ("srcset", "data-srcset"):
+            for url in srcset_urls(a.get(attr)):
+                self.refs.append((attr, url))
+        if tag == "img":
+            self.imgs.append(a)
         if tag == "meta" and (a.get("name") or "").lower() == "robots" \
                 and "noindex" in (a.get("content") or "").lower():
             self.noindex = True
+
+
+def srcset_urls(value):
+    """'a.webp 640w, b.webp 1448w' -> ['a.webp', 'b.webp']"""
+    return [c.split()[0] for c in (value or "").split(",") if c.strip()]
+
+
+def img_candidates(a):
+    """Every local file an <img> may load (src, data-src and both srcsets)."""
+    urls = [a.get("src"), a.get("data-src")] + srcset_urls(a.get("srcset")) + srcset_urls(a.get("data-srcset"))
+    return [u for u in urls if u and not u.startswith("data:")]
 
 
 def published_files():
@@ -123,6 +140,20 @@ def main():
             if u.fragment and target.endswith(".html") and u.fragment not in parsed[target].ids:
                 errors.append(f"{p}: missing anchor -> {value}")
 
+    # 1b. Image size attributes and file weight
+    too_big = set()
+    for p in pages:
+        for a in parsed[p].imgs:
+            if not (a.get("width") and a.get("height")):
+                errors.append(f"{p}: <img> without width/height -> {a.get('src') or a.get('data-src')} "
+                              "(python tools/optimize_images.py PATH prints a complete tag)")
+            for url in img_candidates(a):
+                target = resolve(urlparse(url).path, files)
+                if target and target not in too_big and os.path.getsize(os.path.join(ROOT, target)) > MAX_IMAGE_BYTES:
+                    too_big.add(target)
+                    errors.append(f"{target}: image over {MAX_IMAGE_BYTES // 1_000_000} MB "
+                                  "(run python tools/optimize_images.py on it)")
+
     # 2. Sitemap coverage
     with open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8") as fh:
         locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", fh.read())
@@ -160,17 +191,20 @@ def main():
     errors += sync_partials.check()
 
     if args.weights:
-        print("Image weight per page (unique <img> sources):")
+        print("Image weight per page, MB (largest / smallest version of each image;")
+        print("a phone usually loads close to the smaller figure):")
+        size = lambda t: os.path.getsize(os.path.join(ROOT, t))
         rows = []
         for p in pages:
-            total = 0
-            for src in set(parsed[p].imgs):
-                target = resolve(urlparse(src).path, files)
-                if target:
-                    total += os.path.getsize(os.path.join(ROOT, target))
-            rows.append((total, p))
-        for total, p in sorted(rows, reverse=True):
-            print(f"  {total / 1e6:6.1f} MB  {page_url(p)}")
+            big, small = set(), set()
+            for a in parsed[p].imgs:
+                targets = [t for t in (resolve(urlparse(u).path, files) for u in img_candidates(a)) if t]
+                if targets:
+                    big.add(max(targets, key=size))
+                    small.add(min(targets, key=size))
+            rows.append((sum(map(size, big)), sum(map(size, small)), p))
+        for big, small, p in sorted(rows, reverse=True):
+            print(f"  {big / 1e6:6.1f} / {small / 1e6:4.1f}  {page_url(p)}")
         print()
 
     if warnings:

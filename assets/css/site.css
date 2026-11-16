@@ -35,7 +35,7 @@ body{
   font-family: var(--font-body);
   font-size:16px; line-height:1.7;
 }
-img{ max-width:100%; display:block; }
+img{ max-width:100%; height:auto; display:block; }
 a{ color:var(--blueprint); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
@@ -281,7 +281,7 @@ thead th{ font-family:var(--font-ui); font-size:.7rem; text-transform:uppercase;
 .site-footer ul{ list-style:none; padding:0; margin:0; display:grid; gap:.5rem; }
 .site-footer a{ color:#C9C4B9; font-size:.88rem; }
 .site-footer a:hover{ color:#fff; }
-.site-footer .logo-mark img{ height:36px; margin-bottom:.9rem; }
+.site-footer .logo-mark img{ height:36px; width:auto; margin-bottom:.9rem; }
 .site-footer .bottom{ border-top:1px solid rgba(255,255,255,.12); margin-top:2.4rem; padding-top:1.4rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem; font-family:var(--font-ui); font-size:.75rem; text-transform:uppercase; letter-spacing:.03em; color:#A39D90; }
 .social-row{ display:flex; gap:.8rem; margin-top:.9rem; }
 .social-row a{ border:1px solid rgba(255,255,255,.25); width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:.85rem; }

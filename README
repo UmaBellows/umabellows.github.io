@@ -12,6 +12,7 @@ LAYOUT
   _partials/                         shared head, header, footer, logo strip
   tools/check_site.py                site checks (not published)
   tools/sync_partials.py             stamps _partials/ into every page
+  tools/optimize_images.py           makes new photos web-sized (needs Pillow)
 
 PREVIEW LOCALLY
   From the repository root:
@@ -24,7 +25,8 @@ CHECK BEFORE COMMITTING
     python tools/check_site.py --weights  also lists image weight per page
   The same check runs automatically on every pull request.
   It verifies links, images and #anchors, that sitemap.xml lists every
-  indexable page, that indexable pages have no draft text ([TBD], TODO), and
+  indexable page, that indexable pages have no draft text ([TBD], TODO),
+  that every <img> has width and height and no image is over 1 MB, and
   that every page's shared parts match _partials/.
 
 SHARED PAGE PARTS (_partials/, not published)
@@ -50,6 +52,23 @@ EDITING NOTES
     styles and images from this site, and form posts to FormSubmit. A new
     third-party script, font, embed or form service must be added to it, or
     browsers will block it.
+
+ADDING A PHOTO
+  1. Save it under assets/img/ (PNG or JPEG, as large as you have).
+  2. Run, with the layout it will appear in:
+       python tools/optimize_images.py --layout tile assets/img/catalog/ej/ej-15.png
+     Layouts: tile (photo grids), card (product cards), hero (homepage
+     slider), process (captioned photo strip), half (half-width column),
+     full (full width). This writes ej-15.webp (up to 1600 px) and
+     ej-15-640.webp, moves the original to _archive/originals/ (kept on this
+     computer only, not published), and prints a complete <img> tag.
+  3. Paste the tag into the page and write the alt text. Images in the
+     first screen of a page drop loading="lazy"; full-size links point at
+     the large .webp.
+  4. Run python tools/check_site.py.
+  Homepage slider: only the first slide has a real src. The others use
+  data-src / data-srcset (with the tiny placeholder src), and site.js loads
+  them when they are shown.
 
 QUOTE FORM (contact/index.html)
   Submissions go through FormSubmit (formsubmit.co) to contact@umabellows.com.

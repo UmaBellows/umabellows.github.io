@@ -160,6 +160,7 @@ p{ margin:0 0 1em; max-width:66ch; }
 /* Stat counters */
 .stats-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
 @media (max-width:760px){ .stats-row{ grid-template-columns:repeat(2,1fr); } }
+.stats-row.cols-2{ grid-template-columns:repeat(2,1fr); }
 .stat-box{ border:1px solid var(--line); background:var(--paper-raised); padding:1.3rem 1.2rem; border-radius:var(--radius); box-shadow:var(--shadow); }
 .stat-box .n{ font-family:Consolas,monospace; font-size:2rem; color:var(--bronze-dark); }
 .stat-box .l{ font-family:Bahnschrift,sans-serif; font-size:.78rem; text-transform:uppercase; letter-spacing:.03em; color:var(--steel-600); margin-top:.3rem; }

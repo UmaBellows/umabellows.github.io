@@ -14,6 +14,7 @@
   --graphite:#1F2427;
   --bronze:#9C6428;
   --bronze-dark:#7A4E1F;
+  --bronze-light:#D9A55E;  /* bronze for text on dark backgrounds (7:1 on graphite) */
   --bronze-tint:#F1E4D3;
   --blueprint:#2B5C73;
   --line:#D8DCDB;
@@ -91,8 +92,8 @@ p{ margin:0 0 1em; max-width:66ch; }
 .btn-primary:hover{ background:var(--bronze-dark); }
 .btn-outline{ background:transparent; border-color:var(--steel-300); color:var(--ink); }
 .btn-outline:hover{ border-color:var(--ink); }
-.btn-whatsapp{ background:#25D366; color:#fff; }
-.btn-whatsapp:hover{ background:#1DA851; }
+.btn-whatsapp{ background:#15803D; color:#fff; }  /* darker WhatsApp green: white text at 5:1 */
+.btn-whatsapp:hover{ background:#116B33; }
 
 .nav-toggle{ display:none; background:none; border:1px solid var(--line); border-radius:2px; padding:.4rem .6rem; margin-left:auto; font-size:1.1rem; }
 .mobile-nav{ display:none; }
@@ -114,7 +115,7 @@ p{ margin:0 0 1em; max-width:66ch; }
 .hero .sub{ font-family:var(--font-ui); text-transform:none; letter-spacing:0; color:#D9D5CC; font-size:1.05rem; max-width:48ch; margin-top:.5rem; }
 .hero .stat-row{ display:flex; gap:1.8rem; margin-top:1.6rem; flex-wrap:wrap; }
 .hero .stat{ font-family:var(--font-ui); }
-.hero .stat .n{ font-family:var(--font-mono); font-size:1.5rem; color:var(--bronze); display:block; }
+.hero .stat .n{ font-family:var(--font-mono); font-size:1.5rem; color:var(--bronze-light); display:block; }
 .hero .stat .l{ font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:#B9B4A9; }
 .hero .cta-row{ display:flex; gap:.7rem; margin-top:1.8rem; flex-wrap:wrap; }
 .hero .cta-row .btn-outline{ color:#fff; border-color:rgba(255,255,255,.4); }
@@ -138,14 +139,22 @@ p{ margin:0 0 1em; max-width:66ch; }
   width:7px; height:7px; padding:0; border:none; border-radius:50%; background:rgba(255,255,255,.5); cursor:pointer;
 }
 .hero-slider-dots button.is-active{ background:#fff; }
+.hero-slider-toggle{
+  position:absolute; left:10px; bottom:8px; z-index:3; width:30px; height:30px; padding:0; border:none; border-radius:50%;
+  background:rgba(20,24,26,.55); color:#fff; font-size:.72rem; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:background .15s ease;
+}
+.hero-slider-toggle:hover{ background:rgba(20,24,26,.8); }
 @media (max-width:640px){ .hero-slider-arrow{ width:28px; height:28px; font-size:1rem; } }
 
 /* ---------- Client marquee ---------- */
 .clients{ padding:2.6rem 0; border-bottom:1px solid var(--line); overflow:hidden; }
 .clients .eyebrow{ display:block; margin-bottom:1rem; }
 .marquee{ overflow:hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-.marquee-track{ display:flex; gap:3rem; width:max-content; animation: marquee 32s linear infinite; align-items:center; }
-.marquee-track img{ height:38px; width:auto; max-width:130px; object-fit:contain; filter:grayscale(1) opacity(.75); }
+.marquee-track{ display:flex; width:max-content; animation: marquee 32s linear infinite; align-items:center; }
+/* spacing is a margin on every logo (not flex gap) so the two halves are exactly equal and the loop is seamless */
+.marquee-track img{ flex:none; margin-right:3rem; height:38px; width:auto; max-width:130px; object-fit:contain; filter:grayscale(1) opacity(.75); }
+.marquee:hover .marquee-track{ animation-play-state:paused; }
 @keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 @media (prefers-reduced-motion: reduce){ .marquee-track{ animation:none; overflow-x:auto; } }
 
@@ -186,12 +195,13 @@ p{ margin:0 0 1em; max-width:66ch; }
 .product-card .thumb img{ width:100%; height:100%; object-fit:cover; }
 .product-card .thumb a{ display:block; width:100%; height:100%; }
 /* Click-to-enlarge affordance — invisible until hover/focus so it doesn't clutter the photo */
-.product-card .thumb::after{
+.product-card .thumb a::after, a.tile.tile-photo::after{
   content:"⤢"; position:absolute; top:8px; right:8px; width:26px; height:26px; border-radius:50%;
   background:rgba(20,24,26,.68); color:#fff; display:flex; align-items:center; justify-content:center;
   font-size:13px; line-height:1; opacity:0; transition:opacity .15s ease; pointer-events:none;
 }
-.product-card .thumb:hover::after, .product-card .thumb:focus-within::after{ opacity:1; }
+.product-card .thumb a:hover::after, .product-card .thumb a:focus-visible::after,
+a.tile.tile-photo:hover::after, a.tile.tile-photo:focus-visible::after{ opacity:1; }
 .product-card .body{ padding:1.4rem 1.5rem; display:flex; flex-direction:column; gap:.6rem; flex:1; }
 .product-card .body p{ font-size:.92rem; margin:0; }
 .product-card .tag{ font-family:var(--font-mono); font-size:.7rem; color:var(--bronze-dark); text-transform:uppercase; }
@@ -211,12 +221,6 @@ a.tile:hover :is(h2,h3,h4){ color:#fff; }
    not text tiles — override the dark-fill hover with a zoom-icon affordance instead. */
 a.tile.tile-photo{ position:relative; overflow:hidden; }
 a.tile.tile-photo:hover{ background:inherit; }
-a.tile.tile-photo::after{
-  content:"⤢"; position:absolute; top:8px; right:8px; width:26px; height:26px; border-radius:50%;
-  background:rgba(20,24,26,.68); color:#fff; display:flex; align-items:center; justify-content:center;
-  font-size:13px; line-height:1; opacity:0; transition:opacity .15s ease; pointer-events:none;
-}
-a.tile.tile-photo:hover::after, a.tile.tile-photo:focus-visible::after{ opacity:1; }
 
 /* Testimonials */
 .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
@@ -278,7 +282,7 @@ thead th{ font-family:var(--font-ui); font-size:.7rem; text-transform:uppercase;
 .site-footer a{ color:#C9C4B9; font-size:.88rem; }
 .site-footer a:hover{ color:#fff; }
 .site-footer .logo-mark img{ height:36px; margin-bottom:.9rem; }
-.site-footer .bottom{ border-top:1px solid rgba(255,255,255,.12); margin-top:2.4rem; padding-top:1.4rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem; font-family:var(--font-ui); font-size:.75rem; text-transform:uppercase; letter-spacing:.03em; color:#8B8578; }
+.site-footer .bottom{ border-top:1px solid rgba(255,255,255,.12); margin-top:2.4rem; padding-top:1.4rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem; font-family:var(--font-ui); font-size:.75rem; text-transform:uppercase; letter-spacing:.03em; color:#A39D90; }
 .social-row{ display:flex; gap:.8rem; margin-top:.9rem; }
 .social-row a{ border:1px solid rgba(255,255,255,.25); width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:.85rem; }
 

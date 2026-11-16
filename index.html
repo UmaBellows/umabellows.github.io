@@ -30,9 +30,9 @@
       <a href="/#services">Services</a><a href="/industries/">Industries</a><a href="/facility/">Facility</a><a href="/team/">Team</a><a href="/contact/">Contact</a>
     </nav>
     <div class="cta-slot"><a href="/contact/" class="btn btn-primary">Request a Quote</a></div>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-controls="mobile-nav" aria-expanded="false">☰</button>
   </div>
-  <div class="wrap mobile-nav">
+  <div class="wrap mobile-nav" id="mobile-nav">
     <a href="/">Home</a><a href="/about/">About</a><a href="/products/">Products</a><a href="/case-studies/">Case Studies</a>
     <a href="/#services">Services</a><a href="/industries/">Industries</a><a href="/facility/">Facility</a><a href="/team/">Team</a><a href="/contact/">Contact</a>
     <a href="/contact/" class="btn btn-primary" style="margin-top:.5rem; text-align:center;">Request a Quote</a>
@@ -60,7 +60,7 @@
           <a href="tel:+917069771940" class="btn btn-outline">Call Us</a>
         </div>
       </div>
-      <div class="hero-media hero-slider" data-hero-slider data-interval="5000">
+      <div class="hero-media hero-slider" data-hero-slider data-interval="5000" role="region" aria-roledescription="carousel" aria-label="Product and facility photos">
         <div class="hero-slide is-active"><img src="/assets/img/Slider-3.jpeg" alt="Uma Bellows metal bellows and expansion joint assembly"></div>
         <div class="hero-slide"><img src="/assets/img/catalog/bellows/metal-bellows-branded-stack.png" alt="Stacked metal bellows elements"></div>
         <div class="hero-slide"><img src="/assets/img/catalog/dj/dj-1800-nb.png" alt="DJ 1800 NB large-bore dismantling joint"></div>
@@ -73,7 +73,7 @@
         <div class="hero-slide"><img src="/assets/img/team/fabrication-technician-1.png" alt="Fabrication technician at Uma Bellows"></div>
         <button type="button" class="hero-slider-arrow prev" aria-label="Previous image">‹</button>
         <button type="button" class="hero-slider-arrow next" aria-label="Next image">›</button>
-        <div class="hero-slider-dots" role="tablist" aria-label="Slide selector"></div>
+        <div class="hero-slider-dots" role="group" aria-label="Choose a photo"></div>
       </div>
     </div>
   </section>
@@ -160,10 +160,10 @@
       </div>
 
       <div class="stats-row reveal" style="margin-top:3rem;">
-        <div class="stat-box"><span class="n mono" data-count-to="350">0</span><div class="l">Happy Clients</div></div>
-        <div class="stat-box"><span class="n mono" data-count-to="150">0</span><div class="l">Projects Delivered</div></div>
-        <div class="stat-box"><span class="n mono" data-count-to="17">0</span><div class="l">Years Industry Experience</div></div>
-        <div class="stat-box"><span class="n mono" data-count-to="16">0</span><div class="l">Team Members</div></div>
+        <div class="stat-box"><span class="n mono" data-count-to="350">350</span><div class="l">Happy Clients</div></div>
+        <div class="stat-box"><span class="n mono" data-count-to="150">150</span><div class="l">Projects Delivered</div></div>
+        <div class="stat-box"><span class="n mono" data-count-to="17">17</span><div class="l">Years Industry Experience</div></div>
+        <div class="stat-box"><span class="n mono" data-count-to="16">16</span><div class="l">Team Members</div></div>
       </div>
     </div>
   </section>
@@ -412,7 +412,7 @@
       <li><a href="mailto:contact@umabellows.com">contact@umabellows.com</a></li>
     </ul></div>
   </div>
-  <div class="wrap bottom"><span>© 2026 Uma Bellows. All rights reserved. Uma Bellows is the trade name of Uma Engineering Solution.</span><span><a href="/Privacy-Policy.html" style="color:#8B8578;">Privacy Policy</a></span></div>
+  <div class="wrap bottom"><span>© 2026 Uma Bellows. All rights reserved. Uma Bellows is the trade name of Uma Engineering Solution.</span><span><a href="/Privacy-Policy.html" style="color:#A39D90;">Privacy Policy</a></span></div>
 </footer>
 <!-- /partial:footer -->
 

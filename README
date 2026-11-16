@@ -9,7 +9,9 @@ LAYOUT
   assets/js/site.js                  all scripts (no libraries)
   assets/img/                        images
   sitemap.xml, robots.txt, CNAME     search engines and the custom domain
+  _partials/                         shared head, header, footer, logo strip
   tools/check_site.py                site checks (not published)
+  tools/sync_partials.py             stamps _partials/ into every page
 
 PREVIEW LOCALLY
   From the repository root:
@@ -22,11 +24,26 @@ CHECK BEFORE COMMITTING
     python tools/check_site.py --weights  also lists image weight per page
   The same check runs automatically on every pull request.
   It verifies links, images and #anchors, that sitemap.xml lists every
-  indexable page, and that indexable pages have no draft text ([TBD], TODO).
+  indexable page, that indexable pages have no draft text ([TBD], TODO), and
+  that every page's shared parts match _partials/.
+
+SHARED PAGE PARTS (_partials/, not published)
+  head.html             icons and stylesheet
+  header.html           logo, main menu, mobile menu
+  footer.html           footer columns, address, copyright line
+  clients-marquee.html  the client-logo strip (Home and About)
+  Every page carries copies of these between markers such as
+    <!-- partial:header --> ... <!-- /partial:header -->
+  Never edit between the markers in a page. Edit the file in _partials/, then:
+    python tools/sync_partials.py           stamps it into every page
+    python tools/sync_partials.py --check   reports pages that are out of date
+  The script also highlights the current section in the menu and writes the
+  current year into the footer. In January, run it once to update the year
+  (the site check fails until you do).
 
 EDITING NOTES
-  * The header, mobile menu and footer are repeated in every page. When you
-    change one, change all of them.
+  * New page: copy an existing page so it has the head, header and footer
+    markers, then run tools/sync_partials.py.
   * A new indexable page must be added to sitemap.xml. Pages that are not
     ready get <meta name="robots" content="noindex"> and stay out of it.
 

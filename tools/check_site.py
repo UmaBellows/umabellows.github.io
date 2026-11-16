@@ -10,6 +10,7 @@ Checks:
   * every #anchor exists on the page it points to
   * sitemap.xml lists every indexable page and nothing that is noindex/missing
   * indexable pages contain no draft or placeholder text
+  * every page's shared parts match _partials/ (see tools/sync_partials.py)
 Standard library only, so it runs unchanged in CI.
 """
 import argparse
@@ -152,6 +153,11 @@ def main():
                 warnings.append(f"{p}:{line}: '{m.group(0)}' ({reason})")
             else:
                 errors.append(f"{p}:{line}: draft text '{m.group(0)}'")
+
+    # 4. Shared parts (header, footer, head, logo strip) match _partials/
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import sync_partials
+    errors += sync_partials.check()
 
     if args.weights:
         print("Image weight per page (unique <img> sources):")

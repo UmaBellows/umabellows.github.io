@@ -1,3 +1,4 @@
 _archive/
 uma-bellows-brand-foundation.md
 *.excalidraw
+__pycache__/

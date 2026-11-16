@@ -1,1 +1,44 @@
-Umabellows Website
+Uma Bellows website  (https://umabellows.com)
+
+Static HTML/CSS site served by GitHub Pages from the main branch.
+Merging into main publishes the site within a minute or two.
+
+LAYOUT
+  index.html, <section>/index.html   one HTML file per page
+  assets/css/site.css                all styles
+  assets/js/site.js                  all scripts (no libraries)
+  assets/img/                        images
+  sitemap.xml, robots.txt, CNAME     search engines and the custom domain
+  tools/check_site.py                site checks (not published)
+
+PREVIEW LOCALLY
+  From the repository root:
+    python -m http.server 8000
+  then open http://localhost:8000/ (site paths start with "/", so open
+  the files through the server, not by double-clicking them).
+
+CHECK BEFORE COMMITTING
+    python tools/check_site.py            all checks; exits non-zero on a problem
+    python tools/check_site.py --weights  also lists image weight per page
+  The same check runs automatically on every pull request.
+  It verifies links, images and #anchors, that sitemap.xml lists every
+  indexable page, and that indexable pages have no draft text ([TBD], TODO).
+
+EDITING NOTES
+  * The header, mobile menu and footer are repeated in every page. When you
+    change one, change all of them.
+  * A new indexable page must be added to sitemap.xml. Pages that are not
+    ready get <meta name="robots" content="noindex"> and stay out of it.
+
+QUOTE FORM (contact/index.html)
+  Submissions go through FormSubmit (formsubmit.co) to contact@umabellows.com.
+  * The very first submission triggers a one-time activation email from
+    FormSubmit to contact@umabellows.com. Someone with access to that inbox
+    must click the link; until then, submissions are not delivered.
+  * The activation email also gives a random-string address. Replacing the
+    email in the form's action URL with it keeps the address out of the page.
+  * The Privacy Policy names FormSubmit; keep it accurate if this changes.
+
+PUSHING
+  Some connections drop pushes larger than about 3 MB. Commit large image
+  changes in several smaller commits and push them one at a time.

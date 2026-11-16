@@ -1,2 +1,4 @@
 exclude:
   - _archive
+  - tools
+  - README
